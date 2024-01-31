@@ -410,7 +410,7 @@ if __name__ == "__main__":
 
 #    print(os.environ.get('LANG', None))
     patcher = Patcher(
-            executable_path='driver/linux/chromedriverbeta122',
+            executable_path='/usr/bin/chromedriver',
             force=False,
             version_main=0,
             user_multi_procs=False,
@@ -418,5 +418,5 @@ if __name__ == "__main__":
     
     # self.patcher.auto(user_multiprocess = user_multi_num_procs)
     print('Patching...')
-    patched = patcher.auto()
+    patched = patcher.patch_exe()
     print(patched)
